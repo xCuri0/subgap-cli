@@ -4,7 +4,7 @@ import os
 from sty import fg
 from googleapiclient.discovery import build
 
-key = open(os.path.join(sys.path[0], './key.txt')).read()
+key = open(os.path.join(sys.path[0], './key.txt')).read().strip()
 service = build('youtube', 'v3', developerKey=key)
 
 pewdiepiesubs = service.channels().list(
